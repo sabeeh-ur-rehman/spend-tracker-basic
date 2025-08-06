@@ -149,7 +149,7 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <p className="text-xl text-foreground/80 max-w-2xl">
+            <p className="text-xl text-foreground/80 max-w-2xl mx-[5px] px-0 my-[23px]">
               Get AI-Generated Financial Solutions in Seconds
             </p>
           </div>
