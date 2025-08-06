@@ -73,10 +73,12 @@ export function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
   };
 
   return (
-    <Card className="bg-gradient-to-br from-card to-card/80 border-border/50">
+    <Card className="bg-gradient-card border border-border/30 backdrop-blur-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-foreground">
-          <Plus className="h-5 w-5 text-primary" />
+          <div className="p-2 rounded-full bg-gradient-primary">
+            <Plus className="h-5 w-5 text-white" />
+          </div>
           Add New {type === 'expense' ? 'Expense' : 'Income'}
         </CardTitle>
       </CardHeader>
@@ -134,7 +136,7 @@ export function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
             </Select>
           </div>
           
-          <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+          <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90 text-white border-0">
             Add {type === 'expense' ? 'Expense' : 'Income'}
           </Button>
         </form>

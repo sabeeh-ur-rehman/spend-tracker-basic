@@ -27,11 +27,13 @@ export function ExpenseList({ expenses, onDeleteExpense }: ExpenseListProps) {
 
   if (expenses.length === 0) {
     return (
-      <Card className="bg-gradient-to-br from-card to-card/80 border-border/50">
+      <Card className="bg-gradient-card border border-border/30 backdrop-blur-sm">
         <CardContent className="flex flex-col items-center justify-center py-12">
           <div className="text-muted-foreground text-center">
-            <TrendingDown className="h-12 w-12 mx-auto mb-4 opacity-50" />
-            <p className="text-lg font-medium">No transactions yet</p>
+            <div className="p-4 rounded-full bg-gradient-primary/20 mb-4">
+              <TrendingDown className="h-12 w-12 text-primary" />
+            </div>
+            <p className="text-lg font-medium text-foreground">No transactions yet</p>
             <p className="text-sm">Add your first expense or income to get started</p>
           </div>
         </CardContent>
@@ -40,7 +42,7 @@ export function ExpenseList({ expenses, onDeleteExpense }: ExpenseListProps) {
   }
 
   return (
-    <Card className="bg-gradient-to-br from-card to-card/80 border-border/50">
+    <Card className="bg-gradient-card border border-border/30 backdrop-blur-sm">
       <CardHeader>
         <CardTitle className="text-foreground">Recent Transactions</CardTitle>
       </CardHeader>

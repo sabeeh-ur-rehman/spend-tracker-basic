@@ -129,27 +129,37 @@ const Index = () => {
       </div>;
   }
   return <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
+      {/* Hero background with gradient */}
+      <div className="absolute inset-0 bg-gradient-hero opacity-20 pointer-events-none" />
+      
+      <div className="relative container mx-auto px-4 py-8 max-w-6xl">
         {/* Header */}
-        <div className="flex justify-between items-start mb-8">
+        <div className="flex justify-between items-start mb-12">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-full bg-primary/20">
-                <Wallet className="h-8 w-8 text-primary" />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-4 rounded-full bg-gradient-primary">
+                <Wallet className="h-10 w-10 text-white" />
               </div>
-              <h1 className="text-4xl font-bold text-foreground">Paisy App</h1>
+              <div>
+                <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Paisy App
+                </h1>
+                <p className="text-lg text-muted-foreground mt-1">
+                  Your Financial AI Assistant
+                </p>
+              </div>
             </div>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Welcome back! Track your expenses and manage your finances.
+            <p className="text-xl text-foreground/80 max-w-2xl">
+              Get AI-Generated Financial Solutions in Seconds
             </p>
           </div>
           
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <User className="h-4 w-4" />
-              <span className="text-sm">{user.email}</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card/50 border border-border/30">
+              <User className="h-4 w-4 text-primary" />
+              <span className="text-sm text-foreground">{user.email}</span>
             </div>
-            <Button variant="outline" onClick={handleSignOut} className="flex items-center gap-2">
+            <Button variant="outline" onClick={handleSignOut} className="flex items-center gap-2 border-border/30 hover:bg-card/50">
               <LogOut className="h-4 w-4" />
               Sign Out
             </Button>
