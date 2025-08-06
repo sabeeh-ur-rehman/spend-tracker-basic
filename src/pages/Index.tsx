@@ -144,14 +144,10 @@ const Index = () => {
                 <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Paisy App
                 </h1>
-                <p className="text-lg text-muted-foreground mt-1">
-                  Your Financial AI Assistant
-                </p>
+                <p className="text-lg mt-1 text-slate-500 font-semibold">Manage your expenses.</p>
               </div>
             </div>
-            <p className="text-xl text-foreground/80 max-w-2xl mx-[5px] px-0 my-[23px]">
-              Get AI-Generated Financial Solutions in Seconds
-            </p>
+            
           </div>
           
           <div className="flex items-center gap-4">
