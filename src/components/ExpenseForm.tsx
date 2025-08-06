@@ -73,7 +73,7 @@ export function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
   };
 
   return (
-    <Card className="bg-gradient-card border border-border/30 backdrop-blur-sm">
+    <Card className="bg-gradient-card border border-border/30 backdrop-blur-sm h-full flex flex-col">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-foreground">
           <div className="p-2 rounded-full bg-gradient-primary">
@@ -82,7 +82,7 @@ export function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
           Add New {type === 'expense' ? 'Expense' : 'Income'}
         </CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-1 flex flex-col justify-center">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">

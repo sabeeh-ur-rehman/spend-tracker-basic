@@ -168,14 +168,14 @@ const Index = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-[600px]">
           {/* Add Expense Form */}
-          <div>
+          <div className="h-full">
             <ExpenseForm onAddExpense={addExpense} />
           </div>
 
           {/* Expense List */}
-          <div>
+          <div className="h-full">
             <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense} />
           </div>
         </div>
