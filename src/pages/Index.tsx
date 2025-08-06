@@ -49,7 +49,7 @@ const Index = () => {
           description: expense.description,
           category: expense.category,
           date: expense.created_at,
-          type: 'expense' // For now, all entries are expenses. You can add type column later
+          type: expense.type as 'expense' | 'income'
         }));
         setExpenses(transformedExpenses);
       }
@@ -69,7 +69,8 @@ const Index = () => {
         user_id: user.id,
         amount: expense.amount,
         description: expense.description,
-        category: expense.category
+        category: expense.category,
+        type: expense.type
       }).select().single();
       if (error) {
         console.error('Error adding expense:', error);
@@ -85,7 +86,7 @@ const Index = () => {
           description: data.description,
           category: data.category,
           date: data.created_at,
-          type: 'expense'
+          type: data.type as 'expense' | 'income'
         };
         setExpenses(prev => [newExpense, ...prev]);
       }
