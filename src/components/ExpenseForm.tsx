@@ -65,7 +65,7 @@ export function ExpenseForm({
           Add New {type === 'expense' ? 'Expense' : 'Income'}
         </CardTitle>
       </CardHeader>
-      <CardContent className="mx-0 py-[50px]">
+      <CardContent className="mx-0 py-[53px]">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
